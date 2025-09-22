@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "3812f6e3-4246-4366-8782-483a78563fd9",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20561306"
+	},
+	"item": [
+		{
+			"name": "watchlist_post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Farizam\",\r\n    \"symbol\": \"AAPL\",\r\n    \"name\": \"Apple Inc.\",\r\n    \"price\": 150.54,\r\n    \"change\": 0.5,\r\n    \"change_percent\": 0.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_post",
+					"protocol": "https",
+					"host": [
+						"qainterview",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"watchlist_post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "watchlist_get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_get?username=Farizam&sortBy=id.asc&limit=10",
+					"protocol": "https",
+					"host": [
+						"qainterview",
+						"netlify",
+						"app"
+					],
+					"path": [
+						".netlify",
+						"functions",
+						"watchlist_get"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Farizam"
+						},
+						{
+							"key": "sortBy",
+							"value": "id.asc"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
